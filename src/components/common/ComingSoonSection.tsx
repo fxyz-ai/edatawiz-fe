@@ -9,10 +9,8 @@ import {
   ArrowRight,
   LayoutDashboard,
   BarChart,
-  Layers,
   Cpu,
   Clock,
-  Compass,
 } from 'lucide-react';
 
 interface ComingSoonSectionProps {

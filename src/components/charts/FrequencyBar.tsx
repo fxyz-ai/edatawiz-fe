@@ -288,7 +288,7 @@ export const FrequencyBar: React.FC<FrequencyBarProps> = ({ data, columnName, in
                 position="right"
                 fill="#7D8CA3"
                 fontSize={10}
-                formatter={(v: number) => (v != null ? Number(v).toLocaleString() : '')}
+                formatter={(v: any) => (v != null ? Number(v).toLocaleString() : '')}
               />
               {processedData.map((entry, index) => (
                 <Cell

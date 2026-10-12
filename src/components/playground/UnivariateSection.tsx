@@ -19,10 +19,8 @@ import {
   Sparkles,
   Percent,
   AlertTriangle,
-  Layers,
   Activity,
   Gauge,
-  HelpCircle,
 } from 'lucide-react';
 
 interface UnivariateSectionProps {
@@ -70,17 +68,6 @@ export const UnivariateSection: React.FC<UnivariateSectionProps> = ({ dataset })
     staleTime: 5 * 60 * 1000,
   });
 
-  const getSkewnessBadgeColor = (label: string): 'green' | 'accent' | 'red' => {
-    switch (label) {
-      case 'Symmetric':
-        return 'green';
-      case 'Right-Skewed':
-      case 'Left-Skewed':
-        return 'accent';
-      default:
-        return 'slate' as any;
-    }
-  };
 
   return (
     <div className="space-y-6 animate-fade-up">
