@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-brand-base: #121212;
+  --color-brand-accent: #F2DC5D;
+  --color-brand-accent-hover: #e5cb48;
+  --color-brand-tertiary: #7D8CA3;
+  --color-brand-surface: #181A20;
+  --color-brand-surface-card: #1E222B;
+  --color-brand-surface-hover: #262B37;
+  --color-brand-border: rgba(125, 140, 163, 0.2);
+  --color-brand-border-glow: rgba(242, 220, 93, 0.3);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #f8fafc;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Background Grid Pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(125, 140, 163, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(125, 140, 163, 0.08) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dense {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, rgba(125, 140, 163, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(125, 140, 163, 0.05) 1px, transparent 1px);
+}
+
+/* Glowing accent effects */
+.glow-accent {
+  box-shadow: 0 0 25px -5px rgba(242, 220, 93, 0.25);
+}
+
+.glow-accent-sm {
+  box-shadow: 0 0 15px -3px rgba(242, 220, 93, 0.2);
+}
+
+/* Custom Entrance Animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A303C;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7D8CA3;
+}
